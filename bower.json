@@ -1,0 +1,24 @@
+{
+  "name": "tuktuk_project",
+  "homepage": "https://github.com/samnangcattor/tuktuk_project",
+  "authors": [
+    "samnangcattor <kcattor@gmail.com>"
+  ],
+  "description": "tuk tuk online shopping",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular-resource": "^1.5.8"
+  }
+}

@@ -1,11 +1,11 @@
 <div class="container">
   <div class="slide" ng-controller="sildeController">
-    <img ng-repeat="slide in slides" class="img-responsive"
-      ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+    <img ng-repeat="slide in slides | orderBy:orderProp | limitTo:quantity" class="img-responsive"
+      ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.photo}}">
     <nav class="nav">
       <div class="wrapper">
         <ul class="dots">
-          <li class="dot" ng-repeat="slide in slides">
+          <li class="dot" ng-repeat="slide in slides | orderBy:orderProp | limitTo:quantity">
             <a href="#" ng-class="{'active':isCurrentSlideIndex($index)}"
               ng-click="setCurrentSlideIndex($index);">
             </a>

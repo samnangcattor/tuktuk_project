@@ -12,4 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap/dist/js/bootstrap.min
+//= require angular/angular.min
+//= require angular-route/angular-route
+//= require angular-resource/angular-resource
+//= require angular-animate/angular-animate.min
 //= require controllers/slides_controller
