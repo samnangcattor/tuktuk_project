@@ -12,6 +12,9 @@ gem "config"
 gem "bootstrap-sass", "~> 3.3.6"
 
 group :development do
+  gem "rspec-rails"
+  gem "factory_girl_rails"
+  gem "faker"
   gem "pry"
   gem "spring"
 end
