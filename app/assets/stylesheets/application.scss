@@ -12,6 +12,7 @@
  *= require custom
  *= require_self
  *= require bootstrap/dist/css/bootstrap.min
+ *= require product
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";

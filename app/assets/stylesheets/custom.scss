@@ -12,7 +12,6 @@ body {
 
   .footer {
     position: absolute;
-    bottom: 0;
     width: 100%;
     background: #e5e5e5;
 
@@ -32,14 +31,9 @@ body {
     }
 
     .nav {
+      margin-top: -62px;
       text-align: center;
-      display: block;
-      position: absolute;
-      z-index: 1002;
-      left: 0;
-      bottom: -4px;
-      right: 0;
-      height: 318px;
+      width: 100%;
     }
 
     .nonDraggableImage{
@@ -54,7 +48,6 @@ body {
 
     .nav .wrapper {
       margin: 0 auto;
-      width: 100%;
       padding: 1em 0 .5em;
     }
 
@@ -92,5 +85,9 @@ body {
       border-color: #FFF;
       background-color: transparent;
     }
+  }
+
+  a {
+    cursor: pointer;
   }
 }

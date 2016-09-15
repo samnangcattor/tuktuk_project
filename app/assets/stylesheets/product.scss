@@ -1,0 +1,22 @@
+.product {
+
+  ul.list-product {
+    overflow:hidden;
+
+    li {
+      display:inline-block;
+    }
+
+    img.product-img {
+      padding-bottom: 15px;
+      height: 385px;
+      width: 290px;
+      transition: width height 0.5s;
+    }
+
+    img.product-img:hover {
+      height: 410px;
+      width: 310px;
+    }
+  }
+}
