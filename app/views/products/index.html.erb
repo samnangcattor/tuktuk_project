@@ -16,12 +16,17 @@
   </div>
   <div class="main">
     <h3 class="text-center">PRODUCTS</h3>
-    <div class="product">
+    <div class="product" ng-controller="ProductController">
       <div class="text-center">
         <ul class="list-product">
-          <%= render @products %>
+          <li ng-repeat="product in products">
+            <%= link_to "#", class: "product-img" do %>
+              <img ng-src="{{product.images.pop().photo}}" class="product-img img-thumbnail">
+            <% end %>
+          </li>
         </ul>
       </div>
     </div>
   </div>
 </div>
+
