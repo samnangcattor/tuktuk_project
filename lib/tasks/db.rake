@@ -4,7 +4,7 @@ namespace :db do
     Rake::Task["db:migrate:reset"].invoke
 
     puts "Create 10 products."
-    10.times {FactoryGirl.create :product}
+    12.times {FactoryGirl.create :product}
     puts "Complete."
   end
 end
