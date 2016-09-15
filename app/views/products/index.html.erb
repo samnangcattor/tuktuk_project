@@ -16,12 +16,20 @@
   </div>
   <div class="main">
     <h3 class="text-center">PRODUCTS</h3>
-    <div class="product">
+    <div class="product" ng-controller="ProductController">
       <div class="text-center">
         <ul class="list-product">
-          <%= render @products %>
+          <li dir-paginate="product in products | itemsPerPage: 12">
+            <%= link_to "#", class: "product-img" do %>
+              <img ng-src="{{product.images[product.images.length -1].photo}}" class="product-img img-thumbnail">
+              </img>
+            <% end %>
+            <em class="product-price">{{product.price | currency}}</em>
+          </li>
         </ul>
+        <dir-pagination-controls></dir-pagination-controls>
       </div>
     </div>
   </div>
 </div>
+
