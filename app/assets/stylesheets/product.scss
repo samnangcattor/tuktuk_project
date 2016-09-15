@@ -5,10 +5,15 @@
 
     li {
       display:inline-block;
+      padding-bottom: 15px;
+    }
+
+    a.product-img {
+      padding-left: 10px;
+      padding-right: 10px;
     }
 
     img.product-img {
-      padding-bottom: 15px;
       height: 385px;
       width: 290px;
       transition: width height 0.5s;
