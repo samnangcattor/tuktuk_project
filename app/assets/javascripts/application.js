@@ -18,3 +18,4 @@
 //= require angular-resource/angular-resource
 //= require angular-animate/angular-animate.min
 //= require controllers/controllers
+//= require angularUtils-pagination/dirPagination

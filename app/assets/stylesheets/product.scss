@@ -19,9 +19,14 @@
       transition: width height 0.5s;
     }
 
-    img.product-img:hover {
-      height: 410px;
-      width: 310px;
+    .product-price {
+      margin-left: -299px;
+      position: absolute;
+      margin-top: 325px;
+      font-size: 20px;
+      background-color: #e7e2e2;
+      height: 60px;
+      width: 290px;
     }
   }
 }
