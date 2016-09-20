@@ -3,4 +3,8 @@ class TypesController < ApplicationController
     @types = Type.all
     respond_to :html, :json
   end
+
+  def show
+    @type = Type.find params[:id]
+  end
 end
