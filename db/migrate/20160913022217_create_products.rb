@@ -5,6 +5,9 @@ class CreateProducts < ActiveRecord::Migration
       t.integer :price
       t.integer :discount
       t.text :description
+      t.references :brand, index: true
+      t.references :type
+      t.references :media_art
 
       t.timestamps null: false
     end

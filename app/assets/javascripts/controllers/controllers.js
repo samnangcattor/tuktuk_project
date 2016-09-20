@@ -27,4 +27,28 @@
       // log errors
     });
   }]);
+
+  shopApp.controller("BrandController", ["$scope", "$http", function($scope, $http){
+    $http.get("brands.json").success(function(data, status, headers, config) {
+      $scope.filters = data;
+    }).error(function(data, status, headers, config) {
+      // log errors
+    });
+  }]);
+
+  shopApp.controller("MediaArtController", ["$scope", "$http", function($scope, $http){
+    $http.get("brands.json").success(function(data, status, headers, config) {
+      $scope.filters = data;
+    }).error(function(data, status, headers, config) {
+      // log errors
+    });
+  }]);
+
+  shopApp.controller("TypeController", ["$scope", "$http", function($scope, $http){
+    $http.get("brands.json").success(function(data, status, headers, config) {
+      $scope.filters = data;
+    }).error(function(data, status, headers, config) {
+      // log errors
+    });
+  }]);
 })();

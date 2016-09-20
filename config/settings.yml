@@ -2,3 +2,8 @@ images:
   slide_show:
     deactivate: 0
     activate: 1
+filters:
+  brand: "Brand"
+  type: "Type"
+  media_art: "MediaArt"
+

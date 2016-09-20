@@ -1,0 +1,10 @@
+<li role="presentation" class="dropdown" ng-controller="<%= value %>Controller">
+  <a href="#<%= value %>" data-toggle="collapse">> <%= value %></a>
+  <div id="<%= value %>" class="collapse">
+    <ul class="nav nav-pills nav-stacked">
+      <li ng-repeat="filter in filters">
+        <a>{{filter.name}}</a>
+      </li>
+    </ul>
+  </div>
+</li>

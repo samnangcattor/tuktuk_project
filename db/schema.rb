@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160913022649) do
+ActiveRecord::Schema.define(version: 20160920015113) do
+
+  create_table "brands", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "images", force: :cascade do |t|
     t.string   "photo",      limit: 255
@@ -35,13 +41,30 @@ ActiveRecord::Schema.define(version: 20160913022649) do
 
   add_index "informations", ["user_id"], name: "index_informations_on_user_id", using: :btree
 
+  create_table "media_arts", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
   create_table "products", force: :cascade do |t|
-    t.string   "name",        limit: 255
-    t.integer  "price",       limit: 4
-    t.integer  "discount",    limit: 4
-    t.text     "description", limit: 65535
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.string   "name",         limit: 255
+    t.integer  "price",        limit: 4
+    t.integer  "discount",     limit: 4
+    t.text     "description",  limit: 65535
+    t.integer  "brand_id",     limit: 4
+    t.integer  "type_id",      limit: 4
+    t.integer  "media_art_id", limit: 4
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  add_index "products", ["brand_id"], name: "index_products_on_brand_id", using: :btree
+
+  create_table "types", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "users", force: :cascade do |t|
