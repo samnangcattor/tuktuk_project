@@ -2,39 +2,9 @@
   <div class="panel-heading"><h3 class="panel-title">T-Shirts<h3></div>
   <div class="panel-body">
     <ul class="nav nav-pills nav-stacked">
-      <li role="presentation" class="dropdown">
-        <a href="#demo-brand" data-toggle="collapse">> BRANDS</a>
-        <div id="demo-brand" class="collapse">
-          <ul class="nav nav-pills nav-stacked">
-            <li><a>1</a></li>
-            <li><a>2</a></li>
-            <li><a>3</a></li>
-            <li><a>4</a></li>
-          </ul>
-        </div>
-      </li>
-      <li role="presentation" class="dropdown">
-        <a href="#demo-type" data-toggle="collapse">> TYPES T-SHIRTS</a>
-        <div id="demo-type" class="collapse">
-          <ul class="nav nav-pills nav-stacked">
-            <li><a>1</a></li>
-            <li><a>2</a></li>
-            <li><a>3</a></li>
-            <li><a>4</a></li>
-          </ul>
-        </div>
-      </li>
-      <li role="presentation" class="dropdown">
-        <a href="#demo-art-medium" data-toggle="collapse">> ART MEDIUM</a>
-        <div id="demo-art-medium" class="collapse">
-          <ul class="nav nav-pills nav-stacked">
-            <li><a>1</a></li>
-            <li><a>2</a></li>
-            <li><a>3</a></li>
-            <li><a>4</a></li>
-          </ul>
-        </div>
-      </li>
+      <% Product::FILTERS.each do |filter| %>
+        <%= render "shared/filter", value: filter %>
+      <% end %>
     </ul>
   </div>
 </div>
