@@ -45,7 +45,7 @@
   }]);
 
   shopApp.controller("TypeController", ["$scope", "$http", function($scope, $http){
-    $http.get("/brands.json").success(function(data, status, headers, config) {
+    $http.get("/types.json").success(function(data, status, headers, config) {
       $scope.filters = data;
     }).error(function(data, status, headers, config) {
       // log errors

@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   resources :images, only: :index
   resources :products
   resources :brands, only: [:index, :show]
-  resources :types, only: :index
-  resources :media_arts, only: :index
+  resources :types, only: [:index, :show]
+  resources :media_arts
 end
