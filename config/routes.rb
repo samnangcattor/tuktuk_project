@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   root "products#index"
 
-  resources :images
+  resources :images, only: :index
   resources :products
-  resources :brands
-  resources :types
-  resources :media_arts
+  resources :brands, only: [:index, :show]
+  resources :types, only: :index
+  resources :media_arts, only: :index
 end
