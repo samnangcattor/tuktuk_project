@@ -16,23 +16,22 @@
   </div>
 </div>
 <h3 class="text-center">T-SHIRTS</h3>
-<div class="product" ng-controller="ProductController">
+<div class="product" ng-controller="ProductController" ng-model="search">
   <div class="row">
     <div class="col-xs-3" style="padding-left :63px">
       <%= render "form_filter" %>
     </div>
     <div class="col-xs-9" style="padding-left: 0px; padding-right: 133px;">
       <ul class="list-product text-center">
-        <li dir-paginate="product in products | itemsPerPage: 24">
+        <li dir-paginate="product in products | filter:byPrice('price', filterModelMin.price, filterModelMax.price) | filter:search | itemsPerPage: 24">
           <%= link_to "#", class: "product-img" do %>
             <img ng-src="{{product.images[product.images.length -1].photo}}" class="product-img img-thumbnail">
             </img>
           <% end %>
-          <em class="product-price">{{product.price | currency}}</em>
+          <em class="product-price">{{product.price | currency}} {{product.brand.name}} {{product.type.name}} {{product.media_art.name}} {{product.sex}}</em>
         </li>
       </ul>
       <div class="text-center"><dir-pagination-controls></dir-pagination-controls></div>
     </div>
   </div>
 </div>
-

@@ -3,62 +3,50 @@
   <div class="panel-body">
     <ul class="nav nav-pills nav-stacked">
       <li>
-        <label class="radio-inline"><input type="radio" name="optradio">Male</label>
-        <label class="radio-inline"><input type="radio" name="optradio">Female</label>
+        <div class="radio">
+          <label class="radio-inline"><input type="radio" name="optradio" value="male" ng-model="search.sex"><%= t ".sex.male" %></label>
+          <label class="radio-inline"><input type="radio" name="optradio" value="female" ng-model="search.sex"><%= t ".sex.female" %></label>
+        </div>
       </li>
       <li>
         <div class="form-group">
-          <label for="sel1">Select brand:</label>
-          <select class="form-control" id="sel1">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
+          <label for="sel1"><%= t ".select_brand" %></label>
+          <select class="form-control" id="sel1" ng-model="search.brand.name">
+            <option ng-repeat="brand in brands">{{brand.name}}</option>
           </select>
         </div>
       </li>
       <li>
         <div class="form-group">
-          <label for="sel1">Select type T-shirt:</label>
-          <select class="form-control" id="sel1">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
+          <label for="sel1"><%= t ".select_type" %></label>
+          <select class="form-control" id="sel1" ng-model="search.type.name">
+            <option ng-repeat="type in types">{{type.name}}</option>
           </select>
         </div>
       </li>
       <li>
         <div class="form-group">
-          <label for="sel1">Select art medium:</label>
-          <select class="form-control" id="sel1">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
+          <label for="sel1"><%= t ".select_media_art" %></label>
+          <select class="form-control" id="sel1" ng-model="search.media_art.name">
+            <option ng-repeat="media_art in media_arts">{{media_art.name}}</option>
           </select>
         </div>
       </li>
       <li>
         <div class="form-group">
-          <label for="sel">Min price:</label>
-          <select class="form-control" id="sel1">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
+          <label for="sel"><%= t ".min_price" %></label>
+          <select class="form-control" id="sel1" ng-model="filterModelMin.price">
+            <% Product::PRICE_RANGE.each do |price| %>
+              <option><%= price %></option>
+            <% end %>
           </select>
-          <label for="sel">Max price:</label>
-          <select class="form-control" id="sel2">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
+          <label for="sel"><%= t ".max_price" %></label>
+          <select class="form-control" id="sel2" ng-model="filterModelMax.price">
+            <% Product::PRICE_RANGE.each do |price| %>
+              <option><%= price %></option>
+            <% end %>
           </select>
         </div>
-      </li>
-      <li>
-        <button type="button" class="btn btn-primary btn-md">Search</button>
       </li>
     </ul>
   </div>

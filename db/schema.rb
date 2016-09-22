@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20160920015113) do
     t.integer  "price",        limit: 4
     t.integer  "discount",     limit: 4
     t.text     "description",  limit: 65535
+    t.integer  "sex",          limit: 4
     t.integer  "brand_id",     limit: 4
     t.integer  "type_id",      limit: 4
     t.integer  "media_art_id", limit: 4

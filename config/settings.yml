@@ -3,7 +3,9 @@ images:
     deactivate: 0
     activate: 1
 filters:
-  brand: "Brand"
-  type: "Type"
-  media_art: "MediaArt"
-
+  brand: "brands"
+  type: "types"
+  media_art: "media_arts"
+sex:
+  female: 0
+  male: 1

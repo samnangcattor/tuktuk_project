@@ -1,0 +1,12 @@
+en:
+  shared:
+    search:
+      sex:
+        male: "Male"
+        female: "Female"
+      select_brand: "Select Brand:"
+      select_type: "Select type t-shirt:"
+      select_media_art: "Select media art:"
+      min_price: "Min price:"
+      max_price: "Max price:"
+      search: "Search"

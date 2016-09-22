@@ -5,6 +5,7 @@ class CreateProducts < ActiveRecord::Migration
       t.integer :price
       t.integer :discount
       t.text :description
+      t.integer :sex
       t.references :brand, index: true
       t.references :type
       t.references :media_art
