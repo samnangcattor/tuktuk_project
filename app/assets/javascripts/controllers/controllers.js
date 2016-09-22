@@ -26,29 +26,32 @@
     }).error(function(data, status, headers, config) {
       // log errors
     });
-  }]);
 
-  shopApp.controller("BrandController", ["$scope", "$http", function($scope, $http){
     $http.get("/brands.json").success(function(data, status, headers, config) {
-      $scope.filters = data;
+      $scope.brands = data;
     }).error(function(data, status, headers, config) {
       // log errors
     });
-  }]);
 
-  shopApp.controller("MediaArtController", ["$scope", "$http", function($scope, $http){
     $http.get("/media_arts.json").success(function(data, status, headers, config) {
-      $scope.filters = data;
+      $scope.media_arts = data;
     }).error(function(data, status, headers, config) {
       // log errors
     });
-  }]);
 
-  shopApp.controller("TypeController", ["$scope", "$http", function($scope, $http){
     $http.get("/types.json").success(function(data, status, headers, config) {
-      $scope.filters = data;
+      $scope.types = data;
     }).error(function(data, status, headers, config) {
       // log errors
     });
+
+    $scope.byPrice = function (fieldName, minValue, maxValue) {
+      if (minValue === undefined) minValue = Number.MIN_VALUE;
+      if (maxValue === undefined) maxValue = Number.MAX_VALUE;
+
+      return function predicateFunc(item) {
+        return minValue <= item[fieldName] && item[fieldName] <= maxValue;
+      };
+    };
   }]);
 })();
