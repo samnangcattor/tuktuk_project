@@ -24,7 +24,7 @@
     <div class="col-xs-9" style="padding-left: 0px; padding-right: 133px;">
       <ul class="list-product text-center">
         <li dir-paginate="product in products | filter:byPrice('price', filterModelMin.price, filterModelMax.price) | filter:search | itemsPerPage: 24">
-          <%= link_to "#", class: "product-img" do %>
+          <%= link_to redirect_product("{{product.id}}"), class: "product-img" do %>
             <img ng-src="{{product.images[product.images.length -1].photo}}" class="product-img img-thumbnail">
             </img>
           <% end %>

@@ -1,0 +1,25 @@
+<div id="product" ng-controller="ImageController">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7">
+      </div>
+      <div class="col-sm-5">
+        <div class="product-photo">
+          <img class="img-thumbnail photo" ng-src="{{isCurrentPhotoIndex() || images[0].photo}}">
+          <a class="arrow prev" href="#" ng-click="prevSlide()">
+          <a class="arrow next" href="#" ng-click="nextSlide()">
+          <div class="text-center">
+            <ul class="list-photo">
+              <li ng-repeat="image in images | limitTo:quantity">
+              <a href="#" ng-class="{'active':isCurrentPhotoIndex}"
+                ng-click="setCurrentImage(image, $index)">
+                  <img ng-src="{{image.photo}}" class="img-thumbnail thumbnail_image">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

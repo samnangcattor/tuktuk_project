@@ -4,4 +4,8 @@ module ApplicationHelper
     path = fitler_path.downcase
     path + "/" + fitler_id
   end
+
+  def redirect_product product_id
+    "/products/" + product_id
+  end
 end
