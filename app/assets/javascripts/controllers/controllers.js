@@ -54,4 +54,36 @@
       };
     };
   }]);
+
+  shopApp.controller("ImageController", ["$scope", "$http", function($scope, $http) {
+    $http.get(location.pathname + ".json").success(function(data, status, headers, config) {
+      $scope.images = data;
+    }).error(function(data, status, headers, config) {
+      // log errors
+    });
+
+    $scope.quantity = 4;
+    $scope.currentImage = 0;
+    $scope.currentImageIndex = 0;
+
+
+    $scope.isCurrentPhotoIndex = function () {
+      return $scope.currentImage.photo;
+    };
+
+    $scope.setCurrentImage = function (image, index) {
+      $scope.currentImage = image;
+      $scope.currentImageIndex = index;
+    };
+
+    $scope.nextSlide = function () {
+      $scope.currentImageIndex = ($scope.currentImageIndex < $scope.images.length -1) ? ++$scope.currentImageIndex : 0;
+      $scope.currentImage = $scope.images[$scope.currentImageIndex];
+    }
+
+    $scope.prevSlide = function () {
+      $scope.currentImageIndex = ($scope.currentImageIndex > 0) ? --$scope.currentImageIndex : $scope.images.length - 1;
+      $scope.currentImage = $scope.images[$scope.currentImageIndex];
+    }
+  }]);
 })();
