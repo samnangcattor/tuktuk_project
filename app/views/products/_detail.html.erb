@@ -1,0 +1,21 @@
+<div class="product-detail text-left">
+  <section>
+    <h5><%= link_to @product.media_art.name, brand_path(id: @product.media_art.id) %> /
+      <%= link_to @product.type .name, brand_path(id: @product.type.id) %>
+    </h5>
+    <h4><%= link_to @product.brand.name, brand_path(id: @product.brand.id) %></h4>
+    <h3><%= @product.name %></h3>
+    <h3><span class="text-danger"><%= number_to_currency @product.price, unit: "$" %></span></h3>
+  </section>
+  <section>
+    <hr/>
+    <%= render "form_add_cart" %>
+  </section>
+  <section>
+    <hr/>
+    <h5 class="product-description"><%= t ".product_description" %></h5>
+    <div class="dynamic-content">
+      <p><%= @product.description %></p>
+    </div>
+  </section>
+</div>
