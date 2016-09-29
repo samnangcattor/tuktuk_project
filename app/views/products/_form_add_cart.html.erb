@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-xs-8">
+    <button type="button" class="btn btn-block product-action-add-cart"><span><%= t ".add_cart" %></span></button>
+  </div>
+  <div class="col-xs-4">
+    <section class="product_actions--quantity-wrapper">
+      <button class="product_actions--quantity" ng-click="decreaseCart(cart)">-</button>
+      <span class="product_actions--quantity-value">{{cart}}</span>
+      <button class="product_actions--quantity increase" ng-click="increaseCart(cart)">+</button>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-8">
+    <button type="button" class="btn btn-block product-action-add-favorite"><i class="glyphicon glyphicon-heart"></i> <span><%= t ".add_favorite" %></span></button>
+  </div>
+  <div class="col-xs-4" ng-controller="CartController">
+    <section class="product_actions-share-social">
+      <i class="glyphicon glyphicon-share"></i>
+      <a href="#"><%= t ".share" %></a>
+    </section>
+  </div>
+</div>

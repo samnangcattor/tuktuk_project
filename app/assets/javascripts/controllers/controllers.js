@@ -66,7 +66,6 @@
     $scope.currentImage = 0;
     $scope.currentImageIndex = 0;
 
-
     $scope.isCurrentPhotoIndex = function () {
       return $scope.currentImage.photo;
     };
@@ -85,5 +84,27 @@
       $scope.currentImageIndex = ($scope.currentImageIndex > 0) ? --$scope.currentImageIndex : $scope.images.length - 1;
       $scope.currentImage = $scope.images[$scope.currentImageIndex];
     }
+
+    $scope.zoomImage = function (event) {
+      var x = event.x;
+      var y = event.y;
+      var offsetX = event.offsetX;
+      var offsetY = event.offsetY;
+
+    }
+  }]);
+
+  shopApp.controller("CartController", ["$scope", function($scope) {
+    $scope.cart = 1;
+
+    $scope.increaseCart = function(cart) {
+      $scope.cart ++;
+    };
+
+    $scope.decreaseCart = function(cart) {
+      if ($scope.cart > 1) {
+        $scope.cart --;
+      }
+    };
   }]);
 })();

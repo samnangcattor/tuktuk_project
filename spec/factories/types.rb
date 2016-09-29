@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :type do
-    name {["type 1", "type 2", "type 3", "type 4"].sample}
+    name {["Type 1", "Type 2", "Type 3", "Type 4"].sample}
   end
 end

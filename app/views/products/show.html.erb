@@ -1,11 +1,12 @@
 <div id="product" ng-controller="ImageController">
   <div class="container">
     <div class="row">
-      <div class="col-sm-7">
+      <div class="col-sm-7 text-center" ng-controller="CartController">
+        <%= render "detail" %>
       </div>
       <div class="col-sm-5">
         <div class="product-photo">
-          <img class="img-thumbnail photo" ng-src="{{isCurrentPhotoIndex() || images[0].photo}}">
+          <img id="canvas" class="img-thumbnail photo" ng-src="{{isCurrentPhotoIndex() || images[0].photo}}" ng-mousemove="zoomImage($event)">
           <a class="arrow prev" href="#" ng-click="prevSlide()">
           <a class="arrow next" href="#" ng-click="nextSlide()">
           <div class="text-center">

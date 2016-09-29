@@ -12,3 +12,10 @@ en:
       max_price: "Max price:"
       search: "Search"
       all: "All"
+  products:
+    form_add_cart:
+      add_cart: "ADD TO CART"
+      add_favorite: "ADD FAVORITE"
+      share: "SHARE"
+    detail:
+      product_description: "Product Descriptions"
