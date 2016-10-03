@@ -3,7 +3,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
     create_table :users do |t|
       t.string :name
       t.string :address
-      t.date :birthday
+      t.datetime :birthday
       t.integer :phone_number
       ## Database authenticatable
       t.string :email,              null: false, default: ""

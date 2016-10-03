@@ -12,6 +12,7 @@ gem "config"
 gem "bootstrap-sass", "~> 3.3.6"
 gem "devise"
 gem "omniauth"
+gem "cancancan"
 
 group :development do
   gem "rspec-rails"

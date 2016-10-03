@@ -6,6 +6,7 @@ class Product < ActiveRecord::Base
   enum sex: SEX
 
   has_many :images
+  has_many :carts
   belongs_to :brand
   belongs_to :type
   belongs_to :media_art
