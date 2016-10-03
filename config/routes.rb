@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :brands, only: [:index, :show]
   resources :types, only: [:index, :show]
   resources :media_arts
+  resources :admin
+  resources :carts
 end
