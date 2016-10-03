@@ -9,3 +9,6 @@ filters:
 sex:
   female: 0
   male: 1
+roles:
+  admin: 1
+  normal: 0

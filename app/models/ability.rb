@@ -7,7 +7,7 @@ class Ability
     end
     if user.has_role? :admin
       can :manage, :all
-    elsif user.has_role? :simple
+    elsif user.has_role? :normal
       can :manage, Cart
       can :read, :all
     else
