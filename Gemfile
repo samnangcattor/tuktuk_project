@@ -10,6 +10,8 @@ gem "jbuilder", "~> 2.0"
 gem "sdoc", "~> 0.4.0", group: :doc
 gem "config"
 gem "bootstrap-sass", "~> 3.3.6"
+gem "devise"
+gem "omniauth"
 
 group :development do
   gem "rspec-rails"
